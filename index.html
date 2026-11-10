@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WalkWithMe | Women's Safety & Awareness</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="main-header">
+
+    <div class="logo">
+    <img src="logo.jpeg" alt="WalkWithMe Logo">
+    
+    <span class="logo-text">
+        WalkWith<span>Me</span>
+    </span>
+</div>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#why">Why Us</a>
+        <a href="#emergency">Emergency</a>
+        <a href="#location">Places</a>
+        <a href="#awareness">Awareness</a>
+        <a href="#tools">Tools</a>
+        <a href="#profile">Profile</a>
+    </nav>
+
+    <button class="login-nav-btn" onclick="openLogin()">
+        Login
+    </button>
+
+</header>
+
+
+<main>
+
+<!-- ================= HOME ================= -->
+
+<section id="home" class="hero section">
+
+    <div class="hero-content">
+
+        <p class="eyebrow">
+            WOMEN'S SAFETY • AWARENESS • PREPAREDNESS
+        </p>
+
+        <h1>
+            Walk With<br>
+            <span>Confidence.</span>
+        </h1>
+
+        <p class="hero-text">
+            A simple digital companion designed to help you stay
+            informed, prepared and connected when it matters.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#emergency" class="primary-btn">
+                Emergency Help
+            </a>
+
+            <a href="#awareness" class="secondary-btn">
+                Learn & Prepare
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="hero-side">
+
+    <div class="hero-side">
+
+    <img src="main.jpeg"
+         alt="A woman calling 112 for help while a shadow looms behind her"
+         class="hero-image">
+
+</div>
+            </div>
+
+</section>
+
+
+<!-- ================= WHY WALKWITHME ================= -->
+
+<section id="why" class="section why-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">WHY WALKWITHME?</p>
+
+        <h2>
+            More than an emergency button.
+        </h2>
+
+        <p>
+            WalkWithMe brings practical safety information,
+            awareness tools and everyday preparation together
+            in one place.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+            <div class="feature-number">01</div>
+            <h3>Emergency Support</h3>
+            <p>
+                Quickly access emergency resources,
+                important contacts and safety options.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-number">02</div>
+            <h3>Know Your Surroundings</h3>
+            <p>
+                Find useful nearby places such as hospitals,
+                police stations and pharmacies.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-number">03</div>
+            <h3>Learn & Prepare</h3>
+            <p>
+                Learn about safety situations, legal rights
+                and basic self-defence awareness.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-number">04</div>
+            <h3>Everyday Safety Tools</h3>
+            <p>
+                Use features such as Fake Call,
+                Safety Timer, Medical Card and more.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-number">05</div>
+            <h3>Personal Information</h3>
+            <p>
+                Keep an emergency profile ready with
+                important information and contacts.
+            </p>
+        </div>
+
+        <div class="feature-card">
+            <div class="feature-number">06</div>
+            <h3>Help When You're Stuck</h3>
+            <p>
+                Ask the WalkWithMe Assistant if you
+                don't know how to use a feature.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EMERGENCY ================= -->
+
+<section id="emergency" class="section emergency-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">EMERGENCY SUPPORT</p>
+
+        <h2>
+            When every second matters.
+        </h2>
+
+        <p>
+            Access important emergency options from one place.
+        </p>
+
+    </div>
+
+
+    <div class="emergency-number">
+
+        <div>
+            <span>INDIA'S EMERGENCY NUMBER</span>
+            <strong>112</strong>
+        </div>
+
+        <a href="tel:112" class="primary-btn">
+            Call 112
+        </a>
+
+    </div>
+
+
+    <div class="emergency-grid">
+
+        <!-- SOS -->
+
+        <div class="tool-card emergency-card">
+
+            <div class="tool-icon">!</div>
+
+            <h3>SOS Alert</h3>
+
+            <p>
+                Open the emergency panel and quickly
+                access emergency contacts and 112.
+            </p>
+
+            <button onclick="showSOS()" class="outline-btn">
+                Activate SOS
+            </button>
+
+            <div id="sos-message" class="result-box"></div>
+
+        </div>
+
+
+        <!-- SHAKE -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">↯</div>
+
+            <h3>Shake Alert</h3>
+
+            <p>
+                On supported mobile browsers, allow motion
+                access and use a strong shake to trigger
+                the emergency panel.
+            </p>
+
+            <button onclick="enableShakeAlert()" class="outline-btn">
+                Enable Shake Alert
+            </button>
+
+            <div id="shake-message" class="result-box"></div>
+
+        </div>
+
+
+        <!-- CONTACTS -->
+
+        <div class="tool-card">
+
+            <div class="tool-icon">♡</div>
+
+            <h3>Emergency Contacts</h3>
+
+            <p>
+                Keep trusted people available when you
+                need help quickly.
+            </p>
+
+            <button onclick="showContacts()" class="outline-btn">
+                View Contacts
+            </button>
+
+            <div id="contacts-message" class="result-box"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PLACES ================= -->
+
+<section id="location" class="section location-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">PLACES & LOCATION</p>
+
+        <h2>
+            Know where help is.
+        </h2>
+
+
+        <p>
+            Use your preferred map service to find useful
+            places around your current location.
+        </p>
+
+    </div>
+
+
+    <div class="places-layout">
+
+        <div class="places-image">
+            <img src="loc.png.jpeg"
+                 alt="A woman walking with a map route and location pin">
+        </div>
+
+        <div class="places-content">
+
+        <div class="places-grid">
+
+            <a class="place-card"
+               href="https://www.google.com/maps/search/police+station"
+               target="_blank">
+
+                <span>01</span>
+                <h3>Police Stations</h3>
+                <p>Find nearby police stations.</p>
+
+            </a>
+
+
+            <a class="place-card"
+               href="https://www.google.com/maps/search/hospital"
+               target="_blank">
+
+                <span>02</span>
+                <h3>Hospitals</h3>
+                <p>Find nearby hospitals and medical help.</p>
+
+            </a>
+
+
+            <a class="place-card"
+               href="https://www.google.com/maps/search/pharmacy"
+               target="_blank">
+
+                <span>03</span>
+                <h3>Pharmacies</h3>
+                <p>Find pharmacies around you.</p>
+
+            </a>
+
+
+            <a class="place-card"
+               href="https://www.google.com/maps/search/police+station+open+24+hours"
+               target="_blank">
+
+                <span>04</span>
+                <h3>24-Hour Help</h3>
+                <p>Search for places open around the clock.</p>
+
+            </a>
+
+        </div>
+
+        <div class="location-action">
+
+            <button onclick="getLocation()" class="primary-btn">
+                Use My Location
+            </button>
+
+            <p id="location-message"></p>
+
+        </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= AWARENESS ================= -->
+
+<section id="awareness" class="section awareness-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">AWARENESS</p>
+
+        <h2>
+            Knowledge is part of safety.
+        </h2>
+
+        <p>
+            Learn, understand and prepare for situations
+            before they happen.
+        </p>
+
+    </div>
+
+   
+
+    <!-- QUIZ -->
+
+    <div class="quiz-section">
+
+        <div class="quiz-heading">
+
+            <p class="eyebrow">SAFETY QUIZ</p>
+
+            <h2>How safety-ready are you?</h2>
+
+            <p>
+                Test yourself with practical everyday situations.
+            </p>
+
+        </div>
+
+
+        <div class="quiz-card">
+
+            <div class="quiz-progress">
+                Question <span id="question-number">1</span> of 10
+            </div>
+
+            <h3 id="quiz-question"></h3>
+
+            <div id="quiz-options" class="quiz-options"></div>
+
+            <div class="quiz-controls">
+
+                <button
+                    id="next-question"
+                    onclick="nextQuestion()"
+                    class="primary-btn"
+                    disabled>
+
+                    Next Question
+
+                </button>
+
+            </div>
+
+            <div id="quiz-result" class="quiz-result"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- LEGAL RIGHTS -->
+
+    <div class="rights-section">
+
+        <div class="sub-heading">
+
+            <p class="eyebrow">KNOW YOUR RIGHTS</p>
+
+            <h2>Basic legal awareness</h2>
+
+            <p>
+                These are simplified awareness notes.
+                Always refer to the official legal source
+                for the complete law.
+            </p>
+
+        </div>
+
+
+        <div class="rights-grid">
+
+            <article class="right-card">
+
+                <h3>Protection from Domestic Violence</h3>
+
+                <p>
+                    The Protection of Women from Domestic
+                    Violence Act, 2005 provides legal
+                    protections and remedies in situations
+                    covered by the Act.
+                </p>
+
+                <a
+                    href="https://www.indiacode.nic.in/bitstream/123456789/2021/5/A2005-43.pdf"
+                    target="_blank">
+
+                    Read official Act →
+
+                </a>
+
+            </article>
+
+
+            <article class="right-card">
+
+                <h3>Workplace Sexual Harassment</h3>
+
+                <p>
+                    The POSH Act, 2013 provides a framework
+                    for prevention, prohibition and redressal
+                    of sexual harassment at workplaces.
+                </p>
+
+                <a
+                    href="https://www.indiacode.nic.in/bitstream/123456789/2104/1/A2013-14.pdf"
+                    target="_blank">
+
+                    Read official Act →
+
+                </a>
+
+            </article>
+
+
+            <article class="right-card">
+
+                <h3>Need Legal Help?</h3>
+
+                <p>
+                    For a real legal situation, consult a
+                    qualified professional or an appropriate
+                    official authority.
+                </p>
+
+                <a
+                    href="https://www.google.com/search?q=official+women+legal+aid+India"
+                    target="_blank">
+
+                    Find official resources →
+
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+
+    <!-- SELF DEFENCE -->
+
+<div class="self-defence">
+
+    <div class="sub-heading">
+
+        <p class="eyebrow">SELF DEFENCE</p>
+
+        <h2>Learn. Practise. Stay aware.</h2>
+
+        <p>
+            Watch a self-defence training video and
+            consider professional training for practical
+            instruction.
+        </p>
+
+    </div>
+
+    <div class="video-wrapper">
+
+        <a
+            href="https://www.youtube.com/watch?v=k9Jn0eP-ZVg"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="youtube-thumbnail"
+        >
+
+            <img
+                src="https://img.youtube.com/vi/k9Jn0eP-ZVg/hqdefault.jpg"
+                alt="Self Defence Training Video"
+            >
+
+            <span class="play-button">▶</span>
+
+        </a>
+
+    </div>
+
+</div>        
+
+    </a>
+
+</div>
+        
+    </div>
+
+</section>
+
+
+<!-- ================= SAFETY TOOLS ================= -->
+
+<section id="tools" class="section tools-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">SAFETY TOOLS</p>
+
+        <h2>
+            Small tools for difficult moments.
+        </h2>
+
+    </div>
+
+
+    <div class="tools-grid">
+
+
+        <!-- FAKE CALL -->
+
+        <div class="tool-card">
+
+            <div class="phone-preview">
+
+                <small>Incoming Call</small>
+
+                <strong>Mom</strong>
+
+                <span>Mobile</span>
+
+                <div class="phone-buttons">
+
+                    <button onclick="declineFakeCall()"
+                            class="decline">
+
+                        ✕
+
+                    </button>
+
+                    <button onclick="acceptFakeCall()"
+                            class="accept">
+
+                        ✓
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <h3>Fake Call</h3>
+
+            <p>
+                Use a simulated incoming call screen when
+                you need a simple way to leave an uncomfortable
+                situation.
+            </p>
+
+            <button onclick="showFakeCall()"
+                    class="outline-btn">
+
+                Start Fake Call
+
+            </button>
+
+            <div id="fake-call-message" class="result-box"></div>
+
+        </div>
+<!-- SAFETY TIMER -->
+
+<div class="tool-card">
+
+    <div class="tool-icon">⏱</div>
+
+    <h3>Safety Timer</h3>
+
+    <p>
+        Set a reminder to check in with someone
+        when travelling or going somewhere alone.
+    </p>
+
+    <button onclick="openAlarm()"
+            class="outline-btn">
+
+        Open Alarm
+
+    </button>
+
+    <div id="timer-message" class="result-box"></div>
+
+</div>
+
+
+<!-- MEDICAL CARD -->
+
+<div class="tool-card">
+
+    <div class="tool-icon">+</div>
+
+    <h3>Emergency Medical Card</h3>
+
+    <p>
+        Keep important medical information ready
+        for an emergency.
+    </p>
+
+    <button onclick="showMedicalCard()"
+            class="outline-btn">
+
+        View Card
+
+    </button>
+
+    <div id="medical-message" class="result-box"></div>
+
+</div>
+
+
+<!-- VOICE EMERGENCY MESSAGE -->
+
+<div class="tool-card">
+
+    <div class="tool-icon">🎙</div>
+
+    <h3>Voice Emergency Message</h3>
+
+    <p>
+        Record a short voice message and share it
+        with your emergency contact.
+    </p>
+
+    <div class="voice-controls">
+
+        <button onclick="startVoiceRecording()"
+                id="start-recording"
+                class="outline-btn">
+
+            Start Recording
+
+        </button>
+
+        <button onclick="stopVoiceRecording()"
+                id="stop-recording"
+                class="outline-btn"
+                disabled>
+
+            Stop Recording
+
+        </button>
+
+    </div>
+
+    <div id="voice-message" class="result-box"></div>
+
+    <audio id="voice-preview"
+           controls
+           hidden>
+    </audio>
+
+    <button onclick="sendVoiceRecording()"
+            id="send-recording"
+            class="primary-btn"
+            disabled>
+
+        Send to Emergency Contact
+
+    </button>
+
+</div>
+
+
+<!-- QUICK EXIT -->
+
+<div class="tool-card">
+
+    <div class="tool-icon">↗</div>
+
+    <h3>Quick Exit</h3>
+
+    <p>
+        Quickly leave this website and open a
+        neutral page.
+    </p>
+
+    <button onclick="quickExit()"
+            class="outline-btn">
+
+        Quick Exit
+
+    </button>
+
+</div>
+
+
+
+    <!-- CHECKLIST -->
+
+    <div class="checklist">
+
+        <div class="sub-heading">
+
+            <p class="eyebrow">BEFORE YOU LEAVE</p>
+
+            <h2>Quick safety checklist</h2>
+
+        </div>
+
+
+        <label>
+            <input type="checkbox">
+            My phone has enough battery.
+        </label>
+
+        <label>
+            <input type="checkbox">
+            I have important emergency contacts saved.
+        </label>
+
+        <label>
+            <input type="checkbox">
+            Someone I trust knows where I am going.
+        </label>
+
+        <label>
+            <input type="checkbox">
+            I have planned my transport.
+        </label>
+
+        <label>
+            <input type="checkbox">
+            I know how to access emergency help.
+        </label>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROFILE ================= -->
+
+<section id="profile" class="section profile-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">YOUR PROFILE</p>
+
+        <h2>
+            Keep important information ready.
+        </h2>
+
+        <p>
+            This demo profile does not send your information
+            to a server.
+        </p>
+
+    </div>
+
+
+    <div class="profile-container">
+
+        <form id="profile-form" onsubmit="saveProfile(event)">
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label>Name</label>
+                    <input id="profile-name"
+                           type="text"
+                           placeholder="Your name"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email</label>
+                    <input id="profile-email"
+                           type="email"
+                           placeholder="you@example.com"
+                           required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input id="profile-phone"
+                           type="tel"
+                           placeholder="Phone number">
+                </div>
+
+                <div class="input-group">
+                    <label>Emergency Contact</label>
+                    <input id="profile-contact"
+                           type="text"
+                           placeholder="Trusted person">
+                </div>
+
+                <div class="input-group">
+                    <label>Blood Group</label>
+                    <input id="profile-blood"
+                           type="text"
+                           placeholder="e.g. O+">
+                </div>
+
+                <div class="input-group">
+                    <label>Allergies</label>
+                    <input id="profile-allergies"
+                           type="text"
+                           placeholder="Optional">
+                </div>
+
+            </div>
+
+            <button class="primary-btn" type="submit">
+                Save Demo Profile
+            </button>
+
+        </form>
+
+
+        <div id="profile-result" class="profile-result"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXPERIENCE ================= -->
+
+<section class="section experience-section">
+
+    <div class="section-heading">
+
+        <p class="eyebrow">YOUR EXPERIENCE</p>
+
+        <h2>
+            Help us improve WalkWithMe.
+        </h2>
+
+        <p>
+            Your feedback helps us understand which parts
+            of the website are actually useful.
+        </p>
+
+    </div>
+
+
+    <div class="feedback-box">
+
+        <h3>Was WalkWithMe useful?</h3>
+
+        <div class="rating-buttons">
+
+            <button onclick="giveFeedback(1)">Not really</button>
+            <button onclick="giveFeedback(2)">A little</button>
+            <button onclick="giveFeedback(3)">Useful</button>
+            <button onclick="giveFeedback(4)">Very useful</button>
+
+        </div>
+
+        <p id="feedback-message"></p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- ================= AI ASSISTANT ================= -->
+
+<button id="assistant-button"
+        onclick="toggleAssistant()">
+
+    ?
+    
+</button>
+
+
+<div id="assistant-panel" class="assistant-panel">
+
+    <div class="assistant-header">
+
+        <div>
+            <strong>WalkWithMe Assistant</strong>
+            <small>Website help</small>
+        </div>
+
+        <button onclick="toggleAssistant()">×</button>
+
+    </div>
+
+
+    <div id="assistant-messages"
+         class="assistant-messages">
+
+        <div class="assistant-message">
+
+            Hi! I can help you understand how
+            WalkWithMe works.
+
+        </div>
+
+    </div>
+
+
+    <div class="assistant-questions">
+
+        <button onclick="assistantAnswer('emergency')">
+            How does SOS work?
+        </button>
+
+        <button onclick="assistantAnswer('quiz')">
+            How do I take the quiz?
+        </button>
+
+        <button onclick="assistantAnswer('fakecall')">
+            How does Fake Call work?
+        </button>
+
+        <button onclick="assistantAnswer('location')">
+            How do I find places?
+        </button>
+
+        <button onclick="assistantAnswer('profile')">
+            What is the profile for?
+        </button>
+
+    </div>
+
+
+    <div class="assistant-input">
+
+        <input id="assistant-input"
+               type="text"
+               placeholder="Ask about the website...">
+
+        <button onclick="sendAssistantMessage()">
+            →
+        </button>
+
+    </div>
+
+</div>
+
+
+<!-- ================= LOGIN MODAL ================= -->
+
+<div id="login-modal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                onclick="closeLogin()">
+
+            ×
+
+        </button>
+
+        <p class="eyebrow">WELCOME BACK</p>
+
+        <h2>Login to WalkWithMe</h2>
+
+       
+
+        <input id="login-email"
+               type="email"
+               placeholder="Email">
+
+        <input id="login-password"
+               type="password"
+               placeholder="Password">
+
+        <button onclick="demoLogin()"
+                class="primary-btn">
+
+            Login
+
+        </button>
+
+        <div id="login-result"></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+<div class="footer-logo">
+    <img src="logo.jpeg" alt="WalkWithMe Logo">
+
+    <span class="footer-logo-text">
+        WalkWith<span>Me</span>
+    </span>
+</div>
+    <p>
+           Safety • Awareness • Preparedness  </p>
+
+   
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
